@@ -121,3 +121,13 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+## 日本語
+日本語で書くとこんな感じ．
+こんにちはこんにちはこんにちはこんにちは
+テキストテキストテキストテキストテキストテキスト
+改行を挟むと若干スペースが出来てしまう．
+ちょっと気になるので改行せずに書いた方が良いのだろう．
+
+<cite>いろはにほへと ちりぬるを わかよたれそ つねならむ うゐのおくやま けふこえて あさきゆめみし ゑひもせす[^2]</cite>
+[^2]: いろは歌

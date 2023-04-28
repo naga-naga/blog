@@ -65,3 +65,7 @@ blockquote {
   margin: 0px;
   font-style: italic;
 }
+section.footnotes {
+  margin: 2rem 0;
+  font-size: smaller;
+}

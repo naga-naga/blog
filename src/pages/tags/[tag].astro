@@ -1,10 +1,7 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
 import PostsList from "../../components/PostsList.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const allPosts = (await getCollection("blog")).sort(
@@ -30,17 +27,9 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      <h2>タグ「{tag}」を持つ記事一覧</h2>
-      <PostsList posts={posts} />
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout>
+  <main>
+    <h2>#{tag}</h2>
+    <PostsList posts={posts} />
+  </main>
+</BaseLayout>

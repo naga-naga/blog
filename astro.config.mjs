@@ -12,6 +12,6 @@ export default defineConfig({
       footnoteLabel: " ",
       footnoteBackLabel: "コンテンツに戻る",
       footnoteLabelTagName: "hr",
-    }
-  }
+    },
+  },
 });

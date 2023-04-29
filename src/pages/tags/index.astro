@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import TagList from "../../components/TagList.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout>
+  <main>
+    <h2>タグ一覧</h2>
+    <TagList tags={tags} />
+  </main>
+</BaseLayout>

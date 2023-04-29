@@ -1,26 +1,21 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
 <header>
-  <h2>
-    {SITE_TITLE}
-  </h2>
-  <nav>
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="https://github.com/naga-naga" target="_blank">
-      GitHub
-    </HeaderLink>
-  </nav>
+  <h1>
+    <a href="/">{SITE_TITLE}</a>
+  </h1>
 </header>
 <style>
   header {
     margin: 0em 0 2em;
   }
-  h2 {
+  h1 {
     margin: 0.5em 0;
+  }
+  a {
+    color: #d9dae6;
+    text-decoration: none;
   }
 </style>

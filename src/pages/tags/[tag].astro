@@ -29,8 +29,15 @@ const { posts } = Astro.props;
 
 <BaseLayout>
   <main>
+    <p>全てのタグの一覧は<a href="/tags">こちら</a></p>
     <h2>#{tag}</h2>
-    <p>タグ一覧は<a href="/tags">こちら</a></p>
     <PostsList posts={posts} />
   </main>
 </BaseLayout>
+
+<style>
+  p {
+    text-align: center;
+    font-size: larger;
+  }
+</style>

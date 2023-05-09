@@ -27,7 +27,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout page_title={tag}>
   <main>
     <p>全てのタグの一覧は<a href="/tags">こちら</a></p>
     <h2>#{tag}</h2>

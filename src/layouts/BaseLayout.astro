@@ -4,12 +4,21 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+interface Props {
+  page_title?: string;
+}
+
+const { page_title: title = "" } = Astro.props;
+
+// title が与えられた場合は SITE_TITLE の前に title を付ける
+const title_to_display = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE;
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={title_to_display} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header />

@@ -4,7 +4,7 @@ description: "Here is a sample of some basic Markdown syntax that can be used wh
 pubDate: 2022/07/01
 heroImage: "/placeholder-hero.jpg"
 tags: ["sample", "tag"]
-draft: true
+draft: false
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
